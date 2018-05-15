@@ -8,6 +8,9 @@ frameworkVersion: ">=1.16.0 <2.0.0"
 provider:
   name: aws
   runtime: python3.6
+  region: us-west-2
+  role: arn:aws:iam::646102706174:role/jahon-catfacts 
+  deploymentBucket: us-west-2--mclass--serverless--${opt:stage}
 
 package:
   include:
