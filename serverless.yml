@@ -20,8 +20,15 @@ package:
   exclude:
     - requirements.txt
     - serverless.yml
-    - README.md
     - LICENSE.txt
+plugins:
+  - serverless-domain-manager
+custom:
+  customDomain:
+    domainName: catfacts.aws.wgen.net
+    stage: ${opt:stage}
+    basePath: ""
+    endpointType: 'regional'
 
 # now the good stuff: we can define our functions here
 functions:
